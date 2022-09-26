@@ -12,9 +12,8 @@ class HomeInteractor {
     
     var presenter: HomePresenter
     
-    typealias Dependencies = HasGameService
-   
     // MARK: - DI
+    typealias Dependencies = HasGameService
     struct DI: HomeInteractor.Dependencies {
         var gameService: GameService = GameProvider()
     }
@@ -22,6 +21,7 @@ class HomeInteractor {
     init(presenter: HomePresenter) {
         self.presenter = presenter
     }
+    
     
     func fetchDatas() {
         
@@ -35,10 +35,7 @@ class HomeInteractor {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let response):
-                    print("Fetched new comments")
-                   // self.comments = comments
                     self.presenter.controller.datas = response.results
-                    
                 case .failure(let error):
                     print(error)
                 }

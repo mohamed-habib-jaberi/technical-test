@@ -19,6 +19,10 @@ class GameProvider: GameService {
     let aPIHandler: APIHandlerDelegate
     let responseHandler: ResponseHandlerDelegate
     
+    // MARK: - Init
+    /// Default initializer
+    /// - Parameter aPIHandler: The APIHandler's object
+    /// - Parameter responseHandler: The ResponseHandler's object
     init(aPIHandler: APIHandlerDelegate = APIHandler(),
          responseHandler: ResponseHandlerDelegate = ResponseHandler()) {
         self.aPIHandler = aPIHandler
@@ -64,9 +68,7 @@ class APIHandler: APIHandlerDelegate {
            
         }.resume()
     }
-    
 }
-
 
 protocol ResponseHandlerDelegate {
     func fetchModel<T: Codable>(type: T.Type, data: Data, completion: (Result<T, GameError>) -> Void)
