@@ -13,6 +13,14 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageViewGame: UIImageView!
     
+    typealias Dependencies = HasImageService
+   
+    // MARK: - DI
+    struct DI: ListTableViewCell.Dependencies {
+        var imageService: ImageService = ImageProvider()
+    }
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,15 +34,20 @@ class ListTableViewCell: UITableViewCell {
     
     func setup(_ description: String, imageSURL: String) {
         label.text = description
-        if let url = URL(string: imageSURL) {
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self.imageViewGame.image = image
-                    }
+        self.setImageToImageView(imageSURL: imageSURL)
+    }
+    
+    func setImageToImageView(imageSURL: String) {
+        DI().imageService.fetchImage(from: imageSURL) { imageData in
+            if let data = imageData {
+                
+                DispatchQueue.main.async {
+                    self.imageViewGame.image = UIImage(data: data)
                 }
+            } else {
+                print("Error loading image");
             }
         }
     }
-
+    
 }

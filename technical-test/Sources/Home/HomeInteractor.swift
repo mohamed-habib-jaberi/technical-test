@@ -30,7 +30,7 @@ class HomeInteractor {
        let request = NSMutableURLRequest(url: NSURL(string: "https://api.rawg.io/api/games?key=29ca278badb84604a82dcbacf09c0e40")! as URL,
                                                cachePolicy: .useProtocolCachePolicy,
                                            timeoutInterval: 10.0)
-        
+    
         DI().gameService.fetchRequest(type: Response.self, url: request as URLRequest) { result in
             DispatchQueue.main.async {
                 switch result {

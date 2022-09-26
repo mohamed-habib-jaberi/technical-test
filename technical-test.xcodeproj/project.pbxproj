@@ -24,6 +24,8 @@
 		4362A15327218B65004BF91A /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4362A15227218B65004BF91A /* DetailsPresenter.swift */; };
 		616509C428E247F800A5102E /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616509C328E247F800A5102E /* GameService.swift */; };
 		616509C628E24D6800A5102E /* GameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616509C528E24D6800A5102E /* GameProvider.swift */; };
+		616509C828E2622500A5102E /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616509C728E2622500A5102E /* ImageService.swift */; };
+		616509CA28E2623A00A5102E /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616509C928E2623A00A5102E /* ImageProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		4362A15227218B65004BF91A /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		616509C328E247F800A5102E /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
 		616509C528E24D6800A5102E /* GameProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProvider.swift; sourceTree = "<group>"; };
+		616509C728E2622500A5102E /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		616509C928E2623A00A5102E /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +151,9 @@
 		4362A14827218930004BF91A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				616509C028E2474C00A5102E /* Repository */,
 				4351E58323705AF8005D83FA /* AppDelegate.swift */,
 				4351E58523705AF8005D83FA /* SceneDelegate.swift */,
+				616509C028E2474C00A5102E /* Repository */,
 				4362A14A27218945004BF91A /* Models */,
 				4362A14927218939004BF91A /* Home */,
 				4362A14B27218951004BF91A /* Details */,
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				616509C528E24D6800A5102E /* GameProvider.swift */,
+				616509C928E2623A00A5102E /* ImageProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				616509C328E247F800A5102E /* GameService.swift */,
+				616509C728E2622500A5102E /* ImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -350,9 +356,11 @@
 				4351E58423705AF8005D83FA /* AppDelegate.swift in Sources */,
 				4351E58623705AF8005D83FA /* SceneDelegate.swift in Sources */,
 				4351E5B8237068AF005D83FA /* Response.swift in Sources */,
+				616509C828E2622500A5102E /* ImageService.swift in Sources */,
 				4351E5B6237066EF005D83FA /* DetailsViewController.swift in Sources */,
 				4362A15327218B65004BF91A /* DetailsPresenter.swift in Sources */,
 				4362A14D27218972004BF91A /* HomeInteractor.swift in Sources */,
+				616509CA28E2623A00A5102E /* ImageProvider.swift in Sources */,
 				4362A14F2721897A004BF91A /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

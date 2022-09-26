@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: Enums
 enum GameError: Error {
     case BadURL
     case NoData
@@ -24,7 +25,11 @@ class GameProvider: GameService {
         self.responseHandler = responseHandler
     }
     
-    func fetchRequest<T: Codable>(type: T.Type, url: URLRequest, completion: @escaping(Result<T, GameError>) -> Void) {
+    func fetchRequest<T: Codable>(type: T.Type, url: URLRequest?, completion: @escaping(Result<T, GameError>) -> Void) {
+        
+        guard let url = url else {
+            return completion(.failure(.BadURL))
+        }
        
         aPIHandler.fetchData(url: url) { result in
             switch result {

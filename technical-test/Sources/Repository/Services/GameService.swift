@@ -13,7 +13,7 @@ import Foundation
 /// to the API to fetch the result Game list
 protocol GameService {
     /// Retrieve theList of Game
-    func fetchRequest<T: Codable>(type: T.Type, url: URLRequest, completion: @escaping(Result<T, GameError>) -> Void)
+    func fetchRequest<T: Codable>(type: T.Type, url: URLRequest?, completion: @escaping(Result<T, GameError>) -> Void)
 }
 
 protocol HasGameService {

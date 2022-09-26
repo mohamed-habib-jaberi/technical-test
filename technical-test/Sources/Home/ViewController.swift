@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,7 +40,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let detailsVC = segue.destination as! DetailsViewController
         detailsVC.game = datasCells[tableView.indexPathForSelectedRow!.row].game
     }
+}
 
+// MARK: UITableViewDelegate, UITableViewDataSource
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -58,4 +62,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell?.setup(datasCells[indexPath.row].game.name, imageSURL: datasCells[indexPath.row].game.background_image)
         return cell!
     }
+    
 }
