@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
-    var interactor: HomeInteractor!
+    var interactor: HomeInteractor?
     var datas: [Response.Game] = [] {
         didSet {
             var cells: [HomeViewModel] = []
@@ -23,9 +23,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     var datasCells: [HomeViewModel] = []
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    // MARK: - Life Cycle
+    override func loadView() {
+    super.loadView()
         self.interactor = HomeInteractor(presenter: HomePresenter(controller: self))
     }
     
@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        interactor.fetchDatas()
+        self.interactor?.fetchDatas()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
