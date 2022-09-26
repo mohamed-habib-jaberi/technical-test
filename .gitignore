@@ -1,0 +1,106 @@
+#####
+# OS X temporary files that should never be committed
+.DS_Store
+*.swp
+profile
+
+####
+# Xcode temporary files that should never be committed
+*~.nib
+
+####
+# Objective-C/Swift specific
+*.hmap
+*.ipa
+
+####
+# Xcode build files
+DerivedData/
+build/
+Builds/
+
+#####
+# Xcode private settings (window sizes, bookmarks, breakpoints, custom executables, smart groups)
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+
+####
+# Xcode 4
+xcuserdata
+!xcschemes
+# Xcode 4
+*.moved-aside
+
+####
+# XCode 4 workspaces - more detailed
+!xcshareddata
+!default.xcworkspace
+*.xcworkspacedata
+
+
+####
+# Xcode 5
+*.xccheckout
+*.xcuserstate
+
+####
+# Xcode 7
+*.xcscmblueprint
+
+####
+# AppCode
+.idea/
+
+####
+# Other Xcode files
+profile
+*.hmap
+*.ipa
+
+####
+# CocoaPods
+Pods/
+
+####
+# Carthage
+Carthage/Build
+Carthage
+local_config.sh
+report.html
+report.junit
+AWSApiGatewayBridge.h
+BABYLONEApiClient.swift
+BABYLONEApiClient.swift.bak
+Bridging_Header.h
+Empty.swift
+fastlane/report.xml
+awscli-bundle.zip
+awscli-bundle/install
+awscli-bundle/packages/argparse-1.2.1.tar.gz
+awscli-bundle/packages/awscli-1.11.44.tar.gz
+awscli-bundle/packages/botocore-1.5.7.tar.gz
+awscli-bundle/packages/colorama-0.3.7.zip
+awscli-bundle/packages/docutils-0.13.1.tar.gz
+awscli-bundle/packages/futures-3.0.5.tar.gz
+awscli-bundle/packages/jmespath-0.9.1.tar.gz
+awscli-bundle/packages/ordereddict-1.1.tar.gz
+awscli-bundle/packages/pyasn1-0.1.9.tar.gz
+awscli-bundle/packages/python-dateutil-2.6.0.tar.gz
+awscli-bundle/packages/PyYAML-3.12.tar.gz
+awscli-bundle/packages/rsa-3.4.2.tar.gz
+awscli-bundle/packages/s3transfer-0.1.10.tar.gz
+awscli-bundle/packages/simplejson-3.3.0.tar.gz
+awscli-bundle/packages/six-1.10.0.tar.gz
+awscli-bundle/packages/virtualenv-15.1.0.tar.gz
+
+# Jenkins
+cobertura.xml
+
+# Fastlane
+.env.secret
